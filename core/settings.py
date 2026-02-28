@@ -132,17 +132,20 @@ CSRF_COOKIE_SECURE = not DEBUG
 
 # CSRF trusted origins — add your Railway domain here
 RAILWAY_STATIC_URL = os.environ.get('RAILWAY_STATIC_URL', '')
+RAILWAY_PUBLIC_DOMAIN = os.environ.get('RAILWAY_PUBLIC_DOMAIN', '')
+
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
+    'https://flavor-blog-django-production.up.railway.app',
 ]
 if RAILWAY_STATIC_URL:
     CSRF_TRUSTED_ORIGINS.append(f'https://{RAILWAY_STATIC_URL}')
+if RAILWAY_PUBLIC_DOMAIN:
+    CSRF_TRUSTED_ORIGINS.append(f'https://{RAILWAY_PUBLIC_DOMAIN}')
 
 # Allow Railway domain in ALLOWED_HOSTS
 ALLOWED_HOSTS = ['*']
-if RAILWAY_STATIC_URL:
-    ALLOWED_HOSTS.append(RAILWAY_STATIC_URL)
 
 # Only enable after SSL is working
 SECURE_SSL_REDIRECT = False   # TEMP
