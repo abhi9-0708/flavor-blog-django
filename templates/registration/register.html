@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% block title %}Create Account — Flavor Blog{% endblock %}
+
+{% block extra_head %}
+<style>
+  .auth-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  .auth-input:focus {
+    background: white;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.12);
+  }
+  .dark .auth-input {
+    background: #1f2937;
+    border-color: #374151;
+    color: #f3f4f6;
+  }
+  .dark .auth-input:focus {
+    background: #111827;
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129,140,248,0.15);
+  }
+  .helptext { display: none; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center min-h-[80vh] py-12">
+  <div class="w-full max-w-md">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 shadow-xl shadow-gray-200/50 dark:shadow-none">
+      <!-- Header -->
+      <div class="text-center mb-8">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-brand-500 to-purple-600 flex items-center justify-center shadow-lg shadow-brand-500/25">
+          <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z"/></svg>
+        </div>
+        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Create an account</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Join Flavor and start reading & writing</p>
+      </div>
+
+      <!-- Non-field errors -->
+      {% for error in form.non_field_errors %}
+      <div class="flex items-center gap-2 p-3 mb-4 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-xl text-sm">
+        <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/></svg>
+        {{ error }}
+      </div>
+      {% endfor %}
+
+      <!-- Form -->
+      <form method="post" class="space-y-4">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+          <label for="{{ field.id_for_label }}" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1.5">{{ field.label }}</label>
+          {% if field.name == 'role' %}
+          <select name="{{ field.html_name }}" id="{{ field.id_for_label }}" class="auth-input cursor-pointer">
+            <option value="reader" {% if field.value == 'reader' or not field.value %}selected{% endif %}>📖 Reader — Browse and read posts</option>
+            <option value="author" {% if field.value == 'author' %}selected{% endif %}>✍️ Author — Write and publish posts</option>
+          </select>
+          <p class="mt-1.5 text-xs text-gray-400 dark:text-gray-500">Authors can create, edit & delete their own posts. Readers can read, like, comment & bookmark.</p>
+          {% else %}
+          <input type="{{ field.field.widget.input_type|default:'text' }}" name="{{ field.html_name }}" id="{{ field.id_for_label }}" class="auth-input" placeholder="{{ field.label }}" {% if field.value %}value="{{ field.value }}"{% endif %}>
+          {% endif %}
+          {% if field.errors %}
+          <p class="mt-1 text-sm text-red-500">{{ field.errors|striptags }}</p>
+          {% endif %}
+          {% if field.help_text %}
+          <p class="mt-1 text-xs text-gray-400 dark:text-gray-500">{{ field.help_text|striptags }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-brand-500 to-purple-600 hover:from-brand-600 hover:to-purple-700 text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-brand-500/25 transition-all mt-6">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M17.663 5.076a.75.75 0 01.326 1.01L11.29 19.088a.75.75 0 01-1.28.09l-4.5-5.25a.75.75 0 111.14-.976l3.79 4.422 6.212-12.972a.75.75 0 011.01-.326z" clip-rule="evenodd"/></svg>
+          Create Account
+        </button>
+      </form>
+
+      <div class="mt-6 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          Already have an account?
+          <a href="{% url 'login' %}" class="font-semibold text-brand-600 dark:text-brand-400 hover:underline">Sign in</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Password requirements hint -->
+    <div class="mt-4 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700/50">
+      <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2">Password requirements</p>
+      <ul class="space-y-1">
+        <li class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/></svg>
+          At least 8 characters
+        </li>
+        <li class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/></svg>
+          Not too similar to your username
+        </li>
+        <li class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/></svg>
+          Not a commonly used password
+        </li>
+        <li class="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd"/></svg>
+          Not entirely numeric
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

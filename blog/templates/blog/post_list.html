@@ -1,0 +1,250 @@
+{% extends 'base.html' %}
+{% block title %}{% if active_category %}{{ active_category }} — {% endif %}{% if active_tag %}#{{ active_tag }} — {% endif %}{% if search_query %}Search: {{ search_query }} — {% endif %}Flavor Blog{% endblock %}
+
+{% block content %}
+<div class="space-y-8">
+
+  <!-- ===================== HERO / FEATURED POST ===================== -->
+  {% if featured_post and not search_query and not active_category and not active_tag %}
+  <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-purple-600 to-pink-500 p-8 md:p-12 text-white">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.06%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')] opacity-50"></div>
+    <div class="relative max-w-3xl">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-white/20 backdrop-blur-sm">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M15.22 6.268a.75.75 0 01.968-.431l5.942 2.28a.75.75 0 01.431.97l-2.28 5.941a.75.75 0 11-1.4-.537l1.63-4.251-1.086.483a11.2 11.2 0 00-5.45 5.174.75.75 0 01-1.199.19L9 12.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l3.606 3.605a12.694 12.694 0 015.68-4.973l1.086-.484-4.251-1.631a.75.75 0 01-.432-.97z" clip-rule="evenodd"/></svg>
+          Trending
+        </span>
+        {% if featured_post.access_level == 'premium' %}
+        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-bold bg-amber-400/30 backdrop-blur-sm">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"/></svg>
+          Premium
+        </span>
+        {% endif %}
+      </div>
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+        <a href="{{ featured_post.get_absolute_url }}" class="hover:underline decoration-2 underline-offset-4">{{ featured_post.title }}</a>
+      </h1>
+      <p class="text-white/80 text-lg mb-6 max-w-2xl leading-relaxed">{{ featured_post.get_excerpt }}</p>
+      <div class="flex items-center gap-4">
+        <a href="{{ featured_post.get_absolute_url }}" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-brand-700 font-semibold rounded-xl hover:bg-white/90 transition-all shadow-lg">
+          Read Article
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg>
+        </a>
+        <span class="text-sm text-white/60">{{ featured_post.reading_time }} min read &middot; {{ featured_post.view_count }} views</span>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ===================== SEARCH / FILTER BAR ===================== -->
+  {% if search_query or active_category or active_tag %}
+  <div class="flex flex-wrap items-center gap-3">
+    {% if search_query %}
+    <div class="flex items-center gap-2 px-4 py-2 bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-xl text-sm">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd"/></svg>
+      "{{ search_query }}"
+      <a href="{% url 'post_list' %}" class="ml-1 hover:text-brand-900">&times;</a>
+    </div>
+    {% endif %}
+    {% if active_category %}
+    <div class="flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-xl text-sm">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39.986 3.39.162l.009-.008 4.5-4.5.008-.009a2.40 2.40 0 00-.162-3.39l-9.58-9.58a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"/></svg>
+      {{ active_category }}
+      <a href="{% url 'post_list' %}" class="ml-1 hover:text-purple-900">&times;</a>
+    </div>
+    {% endif %}
+    {% if active_tag %}
+    <div class="flex items-center gap-2 px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-xl text-sm">
+      #{{ active_tag }}
+      <a href="{% url 'post_list' %}" class="ml-1 hover:text-emerald-900">&times;</a>
+    </div>
+    {% endif %}
+    <span class="text-sm text-gray-400">{{ posts|length }} result{{ posts|length|pluralize }}</span>
+  </div>
+  {% endif %}
+
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- ===================== POSTS GRID ===================== -->
+    <div class="flex-1">
+      {% if posts %}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        {% for post in posts %}
+        <article class="fade-up card-hover group bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden flex flex-col">
+          <!-- Image -->
+          {% if post.featured_image %}
+          <a href="{{ post.get_absolute_url }}" class="block aspect-[16/10] overflow-hidden">
+            <img src="{{ post.featured_image.url }}" alt="{{ post.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          </a>
+          {% else %}
+          <a href="{{ post.get_absolute_url }}" class="block aspect-[16/10] bg-gradient-to-br from-brand-100 to-purple-100 dark:from-brand-900/30 dark:to-purple-900/30 flex items-center justify-center">
+            <svg class="w-12 h-12 text-brand-300 dark:text-brand-700" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h12.75a3 3 0 003-3V4.875C21 3.839 20.16 3 19.125 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z" clip-rule="evenodd"/></svg>
+          </a>
+          {% endif %}
+
+          <div class="p-5 flex flex-col flex-1">
+            <!-- Category & badges -->
+            <div class="flex items-center gap-2 mb-3">
+              {% if post.category %}
+              <a href="?category={{ post.category.slug }}" class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 hover:bg-brand-100 transition-colors">{{ post.category.name }}</a>
+              {% endif %}
+              {% if post.access_level == 'premium' %}
+              <span class="flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"/></svg>
+                Pro
+              </span>
+              {% endif %}
+            </div>
+
+            <!-- Title -->
+            <h2 class="text-lg font-bold text-gray-900 dark:text-white leading-snug mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+              <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </h2>
+
+            <!-- Excerpt -->
+            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">{{ post.get_excerpt }}</p>
+
+            <!-- Meta -->
+            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+              <div class="flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-brand-400 to-purple-500 flex items-center justify-center text-white text-[10px] font-bold">
+                  {{ post.author.username|make_list|first|upper }}
+                </div>
+                <div class="text-xs">
+                  <p class="font-medium text-gray-700 dark:text-gray-300">{{ post.author.username }}</p>
+                  <p class="text-gray-400">{{ post.publish_date|date:"M d" }} &middot; {{ post.reading_time }} min</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 text-xs text-gray-400">
+                <span class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"/></svg>
+                  {{ post.like_count|default:"0" }}
+                </span>
+                <span class="flex items-center gap-1">
+                  <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clip-rule="evenodd"/></svg>
+                  {{ post.comment_count|default:"0" }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <!-- Empty State -->
+      <div class="text-center py-20">
+        <div class="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+          <svg class="w-10 h-10 text-gray-300 dark:text-gray-600" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h12.75a3 3 0 003-3V4.875C21 3.839 20.16 3 19.125 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6zm-.75 3.75a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5H6a.75.75 0 01-.75-.75zM6 6.75a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 00.75-.75v-3A.75.75 0 009 6.75H6z" clip-rule="evenodd"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">No posts found</h3>
+        <p class="text-gray-500 dark:text-gray-400 mb-6">{% if search_query %}Try a different search term.{% else %}Check back later for new content.{% endif %}</p>
+        {% if search_query %}
+        <a href="{% url 'post_list' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-500 text-white rounded-xl font-medium hover:bg-brand-600 transition-all">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 010 1.06l-2.47 2.47H21a.75.75 0 010 1.5H4.81l2.47 2.47a.75.75 0 11-1.06 1.06l-3.75-3.75a.75.75 0 010-1.06l3.75-3.75a.75.75 0 011.06 0z" clip-rule="evenodd"/></svg>
+          View all posts
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <!-- ===================== PAGINATION ===================== -->
+      {% if is_paginated %}
+      <nav class="mt-10 flex items-center justify-center gap-2">
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if active_category %}&category={{ active_category }}{% endif %}" 
+           class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z" clip-rule="evenodd"/></svg>
+          Previous
+        </a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+          {% if page_obj.number == num %}
+            <span class="px-4 py-2 text-sm font-bold text-white bg-brand-500 rounded-xl shadow-md">{{ num }}</span>
+          {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a href="?page={{ num }}{% if search_query %}&q={{ search_query }}{% endif %}{% if active_category %}&category={{ active_category }}{% endif %}" class="px-4 py-2 text-sm font-medium text-gray-500 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">{{ num }}</a>
+          {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}{% if search_query %}&q={{ search_query }}{% endif %}{% if active_category %}&category={{ active_category }}{% endif %}" 
+           class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+          Next
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"/></svg>
+        </a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="w-full lg:w-72 xl:w-80 flex-shrink-0 space-y-6">
+      <!-- Categories -->
+      {% if categories %}
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
+        <h3 class="flex items-center gap-2 text-sm font-bold text-gray-900 dark:text-white mb-4">
+          <svg class="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M5.25 2.25a3 3 0 00-3 3v4.318a3 3 0 00.879 2.121l9.58 9.581c.92.92 2.39.986 3.39.162l.009-.008 4.5-4.5.008-.009a2.40 2.40 0 00-.162-3.39l-9.58-9.58a3 3 0 00-2.122-.879H5.25zM6.375 7.5a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z" clip-rule="evenodd"/></svg>
+          Categories
+        </h3>
+        <div class="flex flex-wrap gap-2">
+          {% for cat in categories %}
+          <a href="?category={{ cat.slug }}" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg transition-all
+            {% if active_category == cat.slug %}bg-brand-500 text-white{% else %}bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-brand-50 dark:hover:bg-brand-900/20 hover:text-brand-600{% endif %}">
+            {{ cat.name }}
+            <span class="{% if active_category == cat.slug %}text-white/60{% else %}text-gray-400{% endif %}">{{ cat.post_count }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Quick Actions -->
+      {% if user.is_authenticated %}
+      <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
+        <h3 class="flex items-center gap-2 text-sm font-bold text-gray-900 dark:text-white mb-4">
+          <svg class="w-4 h-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd"/></svg>
+          Quick Actions
+        </h3>
+        <div class="space-y-2">
+          {% if user.role == 'author' or user.role == 'admin' %}
+          <a href="{% url 'post_create' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all group">
+            <div class="w-9 h-9 rounded-lg bg-brand-50 dark:bg-brand-900/30 flex items-center justify-center text-brand-500 group-hover:bg-brand-100 transition-colors">
+              <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z"/><path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z"/></svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Write a post</span>
+          </a>
+          {% endif %}
+          <a href="{% url 'bookmarks' %}" class="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 transition-all group">
+            <div class="w-9 h-9 rounded-lg bg-purple-50 dark:bg-purple-900/30 flex items-center justify-center text-purple-500 group-hover:bg-purple-100 transition-colors">
+              <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z" clip-rule="evenodd"/></svg>
+            </div>
+            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Saved posts</span>
+          </a>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Newsletter CTA -->
+      {% if not user.is_authenticated or not user.profile.is_subscribed %}
+      <div class="bg-gradient-to-br from-brand-500 to-purple-600 rounded-2xl p-6 text-white">
+        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5z" clip-rule="evenodd"/></svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Go Premium</h3>
+        <p class="text-sm text-white/70 mb-4">Unlock exclusive content and support our writers.</p>
+        {% if user.is_authenticated %}
+        <a href="{% url 'subscribe' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-brand-700 font-semibold rounded-xl hover:bg-white/90 transition-all text-sm">
+          Upgrade Now
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg>
+        </a>
+        {% else %}
+        <a href="{% url 'register' %}" class="inline-flex items-center gap-2 px-4 py-2 bg-white text-brand-700 font-semibold rounded-xl hover:bg-white/90 transition-all text-sm">
+          Get Started
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"/></svg>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </aside>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,11 @@
+env/
+venv/
+.env
+*.pyc
+__pycache__/
+db.sqlite3
+staticfiles/
+media/
+*.log
+test_all_features*.py
+generate_images.py

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Profile — Flavor Blog{% endblock %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto">
+  <!-- Profile Header -->
+  <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden mb-6">
+    <div class="h-32 bg-gradient-to-r from-brand-500 via-purple-500 to-pink-500"></div>
+    <div class="px-6 pb-6">
+      <div class="flex flex-col sm:flex-row items-start sm:items-end gap-4 -mt-10">
+        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-400 to-purple-500 flex items-center justify-center text-white text-2xl font-bold border-4 border-white dark:border-gray-900 shadow-xl">
+          {{ user.username|make_list|first|upper }}
+        </div>
+        <div class="flex-1">
+          <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ user.get_full_name|default:user.username }}</h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400">{{ user.email }}</p>
+        </div>
+        {% if profile.is_subscribed %}
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-white">
+          <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd"/></svg>
+          Premium
+        </span>
+        {% endif %}
+      </div>
+      {% if profile.bio %}
+      <p class="mt-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{{ profile.bio }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="grid grid-cols-3 gap-4 mb-6">
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 text-center">
+      <p class="text-2xl font-bold text-gray-900 dark:text-white">{{ post_count }}</p>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Posts</p>
+    </div>
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 text-center">
+      <p class="text-2xl font-bold text-gray-900 dark:text-white">{{ bookmark_count }}</p>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Saved</p>
+    </div>
+    <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-5 text-center">
+      <p class="text-2xl font-bold text-gray-900 dark:text-white">{{ user.role|title }}</p>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Role</p>
+    </div>
+  </div>
+
+  <!-- Recent Posts -->
+  {% if user_posts %}
+  <div class="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-6">
+    <h2 class="flex items-center gap-2 text-lg font-bold text-gray-900 dark:text-white mb-4">
+      <svg class="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 003 3h12.75a3 3 0 003-3V4.875C21 3.839 20.16 3 19.125 3H4.125zM12 9.75a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5H12zm-.75-2.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H12a.75.75 0 01-.75-.75zM6 12.75a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5H6z" clip-rule="evenodd"/></svg>
+      Your Recent Posts
+    </h2>
+    <div class="divide-y divide-gray-100 dark:divide-gray-800">
+      {% for post in user_posts %}
+      <a href="{{ post.get_absolute_url }}" class="flex items-center justify-between py-3 hover:bg-gray-50 dark:hover:bg-gray-800 -mx-2 px-2 rounded-lg transition-all group">
+        <div>
+          <h3 class="font-medium text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">{{ post.title }}</h3>
+          <p class="text-xs text-gray-400 mt-0.5">{{ post.publish_date|date:"M d, Y" }} &middot; {{ post.view_count }} views</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-medium px-2 py-0.5 rounded-full {% if post.status == 'published' %}bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400{% else %}bg-gray-100 text-gray-500 dark:bg-gray-800 dark:text-gray-400{% endif %}">{{ post.status|title }}</span>
+          <svg class="w-4 h-4 text-gray-300" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"/></svg>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if profile.is_subscribed and profile.subscription_end_date %}
+  <div class="mt-6 bg-brand-50 dark:bg-brand-900/20 rounded-2xl p-5 flex items-center gap-4">
+    <svg class="w-6 h-6 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z" clip-rule="evenodd"/></svg>
+    <div>
+      <p class="text-sm font-medium text-brand-700 dark:text-brand-300">Premium subscription active</p>
+      <p class="text-xs text-brand-500/70">Renews {{ profile.subscription_end_date|date:"F j, Y" }}</p>
+    </div>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
