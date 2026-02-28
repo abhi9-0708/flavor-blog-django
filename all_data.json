@@ -591,6 +591,196 @@
   }
 },
 {
+  "model": "blog.post",
+  "pk": 17,
+  "fields": {
+    "title": "RAG vs Fine-Tuning: Choosing the Right AI Strategy in 2026",
+    "slug": "rag-vs-fine-tuning-choosing-the-right-ai-strategy-in-2026",
+    "excerpt": "The Great AI Debate\nAs large language models become the backbone of modern applications, developers face a critical choice: Retrieval-Augmented Generation...",
+    "author": 3,
+    "body": "<h2>The Great AI Debate</h2>\n<p>As large language models become the backbone of modern applications, developers face a critical choice: <strong>Retrieval-Augmented Generation (RAG)</strong> or <strong>fine-tuning</strong>? Each approach has distinct advantages, and the right choice depends on your use case, budget, and data.</p>\n\n<h3>What is RAG?</h3>\n<p>RAG combines a retrieval system (like a vector database) with a generative model. Instead of retraining the model, you feed it relevant context at inference time. This is ideal for knowledge bases, documentation search, and customer support bots.</p>\n\n<h3>What is Fine-Tuning?</h3>\n<p>Fine-tuning involves training an existing model on your specific dataset. The model learns your domain's patterns, terminology, and style. It's best for specialized tasks like medical diagnosis, legal document analysis, or code generation in a specific framework.</p>\n\n<h3>When to Use Each</h3>\n<ul>\n<li><strong>RAG:</strong> Dynamic data, frequently changing knowledge, cost-sensitive projects</li>\n<li><strong>Fine-Tuning:</strong> Stable domain, specific output format, performance-critical tasks</li>\n<li><strong>Hybrid:</strong> Fine-tune a base model AND use RAG for real-time context — the best of both worlds</li>\n</ul>\n\n<h3>Cost Comparison</h3>\n<p>RAG is generally cheaper upfront — you only pay for embeddings and vector storage. Fine-tuning requires GPU compute time and careful dataset curation. However, fine-tuned models often have lower per-query costs since they don't need retrieval overhead.</p>\n\n<p>In 2026, the trend is clear: <strong>start with RAG, fine-tune when you hit a ceiling</strong>. Most production systems will use a hybrid approach combining both strategies.</p>",
+    "featured_image": "",
+    "category": 2,
+    "publish_date": "2026-02-01T09:56:02.949Z",
+    "created_date": "2026-02-28T09:56:02.950Z",
+    "updated_date": "2026-02-28T09:56:02.950Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 18,
+  "fields": {
+    "title": "Building Your First AI Agent with Python and OpenAI",
+    "slug": "building-your-first-ai-agent-with-python-and-openai",
+    "excerpt": "From Chatbots to Autonomous Agents\nAI agents go beyond simple chatbots — they can plan, use tools, browse the web, write code, and execute multi-step tasks...",
+    "author": 3,
+    "body": "<h2>From Chatbots to Autonomous Agents</h2>\n<p>AI agents go beyond simple chatbots — they can plan, use tools, browse the web, write code, and execute multi-step tasks autonomously. In this guide, we'll build a functional AI agent from scratch using Python and OpenAI's API.</p>\n\n<h3>What Makes an Agent Different?</h3>\n<p>A chatbot responds to a single message. An <strong>agent</strong> can:</p>\n<ul>\n<li>Break down complex tasks into steps</li>\n<li>Call external tools (APIs, databases, file systems)</li>\n<li>Maintain memory across interactions</li>\n<li>Self-correct when something goes wrong</li>\n</ul>\n\n<h3>The Core Loop</h3>\n<pre><code>while not task_complete:\n    thought = llm.think(context)\n    action = llm.choose_tool(thought)\n    result = execute_tool(action)\n    context.append(result)\n    task_complete = llm.evaluate(context)</code></pre>\n\n<h3>Tool Definition</h3>\n<p>Define tools as functions with clear descriptions. The LLM decides which tool to call based on the current context. Common tools include: web search, code execution, file I/O, database queries, and API calls.</p>\n\n<h3>Safety Guardrails</h3>\n<p>Always implement: maximum iteration limits, output validation, human-in-the-loop for destructive actions, and cost tracking. An agent without guardrails is a recipe for disaster.</p>\n\n<p>The agent paradigm is transforming software development. Start small, add tools incrementally, and always test with edge cases.</p>",
+    "featured_image": "",
+    "category": 2,
+    "publish_date": "2026-02-11T09:56:03.018Z",
+    "created_date": "2026-02-28T09:56:03.018Z",
+    "updated_date": "2026-02-28T09:56:03.018Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 19,
+  "fields": {
+    "title": "Tailwind CSS v4: What's New and Migration Guide",
+    "slug": "tailwind-css-v4-whats-new-and-migration-guide",
+    "excerpt": "Tailwind CSS v4: A Complete Overhaul\nTailwind CSS v4 represents the biggest change since the framework's inception. Built on a new high-performance engine...",
+    "author": 3,
+    "body": "<h2>Tailwind CSS v4: A Complete Overhaul</h2>\n<p>Tailwind CSS v4 represents the biggest change since the framework's inception. Built on a new high-performance engine written in Rust, it's <strong>10x faster</strong> than v3 and introduces a fundamentally new configuration approach.</p>\n\n<h3>Key Changes</h3>\n<ul>\n<li><strong>CSS-first configuration:</strong> No more <code>tailwind.config.js</code> — configure everything in CSS with <code>@theme</code></li>\n<li><strong>Automatic content detection:</strong> No need to specify content paths</li>\n<li><strong>New 3D transform utilities:</strong> <code>rotate-x-45</code>, <code>perspective-800</code></li>\n<li><strong>Container queries built-in:</strong> <code>@container</code> support without plugins</li>\n<li><strong>Native cascade layers:</strong> Better specificity management</li>\n</ul>\n\n<h3>Migration from v3</h3>\n<p>Run the official migration tool:</p>\n<pre><code>npx @tailwindcss/upgrade</code></pre>\n<p>This handles most breaking changes automatically. Manual updates needed for: custom plugins, JavaScript config references, and PostCSS setup changes.</p>\n\n<h3>Performance Wins</h3>\n<p>The Rust-based engine compiles a 10,000-class project in under 100ms (vs ~800ms in v3). Hot reload is nearly instant. This makes Tailwind v4 viable for even the largest enterprise projects.</p>\n\n<p>If you're starting a new project in 2026, go with v4. For existing projects, the migration tool makes upgrading straightforward.</p>",
+    "featured_image": "",
+    "category": 1,
+    "publish_date": "2026-02-03T09:56:03.063Z",
+    "created_date": "2026-02-28T09:56:03.063Z",
+    "updated_date": "2026-02-28T09:56:03.063Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 20,
+  "fields": {
+    "title": "PostgreSQL Performance Tuning: From Slow Queries to Sub-Millisecond",
+    "slug": "postgresql-performance-tuning-from-slow-queries-to-sub-millisecond",
+    "excerpt": "Mastering PostgreSQL Performance\nEvery web application eventually hits a database bottleneck. PostgreSQL is incredibly powerful, but like any tool, it needs...",
+    "author": 3,
+    "body": "<h2>Mastering PostgreSQL Performance</h2>\n<p>Every web application eventually hits a database bottleneck. PostgreSQL is incredibly powerful, but like any tool, it needs proper tuning. This guide covers the most impactful optimizations for production systems.</p>\n\n<h3>1. EXPLAIN ANALYZE Everything</h3>\n<p>Before optimizing, measure. Use <code>EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)</code> to understand exactly how PostgreSQL executes your query. Look for sequential scans on large tables, nested loops, and high buffer reads.</p>\n\n<h3>2. Index Strategy</h3>\n<ul>\n<li><strong>B-tree:</strong> Default, great for equality and range queries</li>\n<li><strong>GIN:</strong> Full-text search, JSONB, and array columns</li>\n<li><strong>BRIN:</strong> Huge tables with naturally ordered data (timestamps)</li>\n<li><strong>Partial indexes:</strong> Index only rows that matter: <code>WHERE status = 'active'</code></li>\n</ul>\n\n<h3>3. Connection Pooling</h3>\n<p>PostgreSQL creates a new process per connection. Use PgBouncer or built-in connection pooling to handle hundreds of concurrent users without exhausting server resources.</p>\n\n<h3>4. Query Optimization Patterns</h3>\n<ul>\n<li>Replace <code>SELECT *</code> with specific columns</li>\n<li>Use <code>EXISTS</code> instead of <code>COUNT(*) > 0</code></li>\n<li>Batch inserts with <code>COPY</code> instead of individual INSERTs</li>\n<li>Leverage CTEs for complex queries but beware of optimization barriers</li>\n</ul>\n\n<h3>5. Configuration Tuning</h3>\n<p>Key settings to adjust: <code>shared_buffers</code> (25% of RAM), <code>effective_cache_size</code> (75% of RAM), <code>work_mem</code> (per-query sort memory), and <code>random_page_cost</code> (lower for SSDs).</p>\n\n<p>A well-tuned PostgreSQL instance can handle millions of rows with sub-millisecond query times. Start with EXPLAIN, add targeted indexes, and tune configuration for your hardware.</p>",
+    "featured_image": "",
+    "category": 1,
+    "publish_date": "2026-02-27T09:56:03.114Z",
+    "created_date": "2026-02-28T09:56:03.114Z",
+    "updated_date": "2026-02-28T09:56:03.114Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 21,
+  "fields": {
+    "title": "GitHub Actions CI/CD: Automate Everything in Your Pipeline",
+    "slug": "github-actions-cicd-automate-everything-in-your-pipeline",
+    "excerpt": "CI/CD with GitHub Actions\nGitHub Actions has become the go-to CI/CD platform for modern development teams. It's free for public repos, deeply integrated with...",
+    "author": 3,
+    "body": "<h2>CI/CD with GitHub Actions</h2>\n<p>GitHub Actions has become the go-to CI/CD platform for modern development teams. It's free for public repos, deeply integrated with GitHub, and powerful enough to handle complex deployment pipelines.</p>\n\n<h3>Your First Workflow</h3>\n<p>Create <code>.github/workflows/ci.yml</code>:</p>\n<pre><code>name: CI Pipeline\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v5\n        with:\n          python-version: '3.12'\n      - run: pip install -r requirements.txt\n      - run: python manage.py test</code></pre>\n\n<h3>Key Concepts</h3>\n<ul>\n<li><strong>Triggers:</strong> push, pull_request, schedule, workflow_dispatch</li>\n<li><strong>Jobs:</strong> Run in parallel by default, use <code>needs:</code> for dependencies</li>\n<li><strong>Secrets:</strong> Store API keys in Settings → Secrets → Actions</li>\n<li><strong>Matrix builds:</strong> Test across multiple Python/Node versions simultaneously</li>\n</ul>\n\n<h3>Deployment to Railway</h3>\n<p>Railway auto-deploys from GitHub, but you can add a health check step after deploy:</p>\n<pre><code>- name: Health Check\n  run: |\n    sleep 30\n    curl -f https://your-app.up.railway.app/ || exit 1</code></pre>\n\n<h3>Pro Tips</h3>\n<ul>\n<li>Cache pip/npm dependencies to speed up builds by 60%</li>\n<li>Use <code>concurrency</code> groups to cancel redundant runs</li>\n<li>Add status badges to your README</li>\n</ul>\n\n<p>A solid CI/CD pipeline catches bugs early, enforces code quality, and makes deployments boring — which is exactly what you want.</p>",
+    "featured_image": "",
+    "category": 3,
+    "publish_date": "2026-02-26T09:56:03.168Z",
+    "created_date": "2026-02-28T09:56:03.169Z",
+    "updated_date": "2026-02-28T09:56:03.169Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 22,
+  "fields": {
+    "title": "Terraform vs Pulumi: Infrastructure as Code in 2026",
+    "slug": "terraform-vs-pulumi-infrastructure-as-code-in-2026",
+    "excerpt": "Infrastructure as Code: The 2026 Landscape\nManaging cloud infrastructure manually is a relic of the past. Infrastructure as Code (IaC) tools let you define,...",
+    "author": 3,
+    "body": "<h2>Infrastructure as Code: The 2026 Landscape</h2>\n<p>Managing cloud infrastructure manually is a relic of the past. Infrastructure as Code (IaC) tools let you define, version, and automate your entire cloud setup. The two leading contenders: <strong>Terraform</strong> (by HashiCorp) and <strong>Pulumi</strong>.</p>\n\n<h3>Terraform: The Industry Standard</h3>\n<p>Terraform uses HCL (HashiCorp Configuration Language), a declarative DSL. It's battle-tested, has the largest provider ecosystem (3,000+ providers), and is the default choice for most enterprises.</p>\n<pre><code>resource \"aws_instance\" \"web\" {\n  ami           = \"ami-0c55b159cbfafe1f0\"\n  instance_type = \"t3.micro\"\n  tags = { Name = \"web-server\" }\n}</code></pre>\n\n<h3>Pulumi: Code Over Configuration</h3>\n<p>Pulumi lets you write infrastructure in Python, TypeScript, Go, or C#. No new language to learn. Full IDE support, testing frameworks, and abstraction capabilities.</p>\n<pre><code>import pulumi_aws as aws\nserver = aws.ec2.Instance(\"web\",\n    ami=\"ami-0c55b159cbfafe1f0\",\n    instance_type=\"t3.micro\",\n    tags={\"Name\": \"web-server\"}\n)</code></pre>\n\n<h3>How to Choose</h3>\n<table>\n<tr><th>Factor</th><th>Terraform</th><th>Pulumi</th></tr>\n<tr><td>Language</td><td>HCL (DSL)</td><td>Python/TS/Go/C#</td></tr>\n<tr><td>Learning curve</td><td>New syntax</td><td>Use existing skills</td></tr>\n<tr><td>Ecosystem</td><td>Largest</td><td>Growing fast</td></tr>\n<tr><td>State management</td><td>File/Cloud</td><td>Built-in cloud</td></tr>\n<tr><td>Testing</td><td>Limited</td><td>Native unit tests</td></tr>\n</table>\n\n<p><strong>Verdict:</strong> Use Terraform if your team already knows it or you need maximum provider coverage. Choose Pulumi if you want to leverage existing programming skills and need complex logic in your infrastructure code.</p>",
+    "featured_image": "",
+    "category": 3,
+    "publish_date": "2026-01-30T09:56:03.215Z",
+    "created_date": "2026-02-28T09:56:03.216Z",
+    "updated_date": "2026-02-28T09:56:03.216Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 23,
+  "fields": {
+    "title": "Building Offline-First Mobile Apps with SQLite and Sync",
+    "slug": "building-offline-first-mobile-apps-with-sqlite-and-sync",
+    "excerpt": "Why Offline-First Matters\nUsers expect apps to work everywhere — in subways, airplanes, and areas with spotty coverage. An offline-first architecture ensures...",
+    "author": 3,
+    "body": "<h2>Why Offline-First Matters</h2>\n<p>Users expect apps to work everywhere — in subways, airplanes, and areas with spotty coverage. An offline-first architecture ensures your app is always functional, syncing data when connectivity returns.</p>\n\n<h3>The Architecture</h3>\n<ol>\n<li><strong>Local database (SQLite/WatermelonDB):</strong> All reads and writes go to local storage first</li>\n<li><strong>Sync engine:</strong> Background process that pushes local changes to the server and pulls remote updates</li>\n<li><strong>Conflict resolution:</strong> Strategy for handling simultaneous edits (last-write-wins, merge, or manual)</li>\n</ol>\n\n<h3>SQLite in React Native</h3>\n<p>Use <code>expo-sqlite</code> or <code>react-native-quick-sqlite</code> for blazing-fast local queries:</p>\n<pre><code>import * as SQLite from 'expo-sqlite';\nconst db = await SQLite.openDatabaseAsync('app.db');\nawait db.execAsync('CREATE TABLE IF NOT EXISTS tasks (id TEXT PRIMARY KEY, title TEXT, done INTEGER, synced INTEGER DEFAULT 0)');\n\n// Write locally\nawait db.runAsync('INSERT INTO tasks (id, title, done) VALUES (?, ?, ?)', [uuid(), 'Buy groceries', 0]);\n\n// Sync unsynced records\nconst unsynced = await db.getAllAsync('SELECT * FROM tasks WHERE synced = 0');</code></pre>\n\n<h3>Sync Strategies</h3>\n<ul>\n<li><strong>Push-based:</strong> Client pushes changes on reconnect. Simple but can miss server updates.</li>\n<li><strong>Pull-based:</strong> Client polls for changes. Higher bandwidth but reliable.</li>\n<li><strong>WebSocket:</strong> Real-time bidirectional sync. Best UX but complex to implement.</li>\n</ul>\n\n<h3>Conflict Resolution</h3>\n<p>The hardest part. Options: timestamp-based (last write wins), field-level merging, or operational transforms (like Google Docs). For most apps, last-write-wins with a \"modified_at\" timestamp is sufficient.</p>\n\n<p>Offline-first isn't just for travel apps — it dramatically improves perceived performance for every mobile application.</p>",
+    "featured_image": "",
+    "category": 4,
+    "publish_date": "2026-01-29T09:56:03.268Z",
+    "created_date": "2026-02-28T09:56:03.268Z",
+    "updated_date": "2026-02-28T09:56:03.268Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 24,
+  "fields": {
+    "title": "Designing Accessible Web Apps: A Developer's Practical Guide",
+    "slug": "designing-accessible-web-apps-a-developers-practical-guide",
+    "excerpt": "Accessibility is Not Optional\nOver 1 billion people worldwide live with some form of disability. Building accessible applications isn't just the right thing to...",
+    "author": 3,
+    "body": "<h2>Accessibility is Not Optional</h2>\n<p>Over 1 billion people worldwide live with some form of disability. Building accessible applications isn't just the right thing to do — it's a legal requirement in many jurisdictions and improves UX for everyone.</p>\n\n<h3>The WCAG 2.2 Essentials</h3>\n<p>Focus on four principles: <strong>Perceivable, Operable, Understandable, Robust (POUR)</strong>.</p>\n\n<h3>Quick Wins (Under 30 Minutes)</h3>\n<ul>\n<li><strong>Alt text:</strong> Every <code>&lt;img&gt;</code> needs descriptive alt text. Decorative images get <code>alt=\"\"</code></li>\n<li><strong>Color contrast:</strong> Minimum 4.5:1 ratio for text. Use tools like WebAIM Contrast Checker</li>\n<li><strong>Keyboard navigation:</strong> Every interactive element must be reachable via Tab key</li>\n<li><strong>Form labels:</strong> Every input needs an associated <code>&lt;label&gt;</code> element</li>\n<li><strong>Heading hierarchy:</strong> Use h1 → h2 → h3 in order, never skip levels</li>\n</ul>\n\n<h3>ARIA: Use With Caution</h3>\n<p>The first rule of ARIA is: <strong>don't use ARIA</strong> if a native HTML element works. A <code>&lt;button&gt;</code> is always better than <code>&lt;div role=\"button\"&gt;</code>. Use ARIA only for complex widgets like modals, tabs, and custom dropdowns.</p>\n\n<h3>Testing Checklist</h3>\n<ol>\n<li>Navigate your entire app using only the keyboard</li>\n<li>Run Lighthouse accessibility audit (aim for 90+)</li>\n<li>Test with a screen reader (VoiceOver on Mac, NVDA on Windows)</li>\n<li>Verify all forms work without a mouse</li>\n<li>Check color contrast on every page</li>\n</ol>\n\n<p>Accessibility benefits everyone: captions help in noisy environments, keyboard navigation helps power users, and high contrast helps in bright sunlight. Build for all.</p>",
+    "featured_image": "",
+    "category": 5,
+    "publish_date": "2026-02-17T09:56:03.315Z",
+    "created_date": "2026-02-28T09:56:03.315Z",
+    "updated_date": "2026-02-28T09:56:03.315Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 25,
+  "fields": {
+    "title": "The Staff Engineer Path: Growing Beyond Senior Developer",
+    "slug": "the-staff-engineer-path-growing-beyond-senior-developer",
+    "excerpt": "What Comes After Senior?\nYou've been a senior developer for years. You're productive, respected, and comfortable. But what's next? The Staff Engineer role...",
+    "author": 3,
+    "body": "<h2>What Comes After Senior?</h2>\n<p>You've been a senior developer for years. You're productive, respected, and comfortable. But what's next? The <strong>Staff Engineer</strong> role represents a fork in the road: technical leadership without people management.</p>\n\n<h3>The Four Staff Archetypes</h3>\n<ul>\n<li><strong>Tech Lead:</strong> Guides a single team's technical direction. Closest to hands-on coding.</li>\n<li><strong>Architect:</strong> Designs systems spanning multiple teams. Focuses on technical vision and standards.</li>\n<li><strong>Solver:</strong> Parachutes into the hardest problems across the organization. Deep specialist.</li>\n<li><strong>Right Hand:</strong> Extends an executive's reach. Handles cross-org technical strategy.</li>\n</ul>\n\n<h3>Skills That Matter More at Staff Level</h3>\n<ol>\n<li><strong>Writing:</strong> RFCs, design docs, technical strategy memos. Your influence scales through documents.</li>\n<li><strong>Navigating ambiguity:</strong> Senior engineers get well-defined problems. Staff engineers define the problems.</li>\n<li><strong>Stakeholder management:</strong> Translating technical decisions into business impact for leadership.</li>\n<li><strong>Mentorship:</strong> Your success is measured by how much you multiply others' output.</li>\n<li><strong>Saying no:</strong> Protecting the team from scope creep, unnecessary complexity, and shiny-object syndrome.</li>\n</ol>\n\n<h3>How to Get There</h3>\n<p>Don't wait for promotion. Start doing Staff-level work now:</p>\n<ul>\n<li>Write a technical strategy document for your domain</li>\n<li>Identify and fix a cross-team pain point</li>\n<li>Mentor 2-3 engineers consistently</li>\n<li>Present at company-wide tech talks</li>\n<li>Lead a multi-quarter project from proposal to delivery</li>\n</ul>\n\n<p>The path to Staff is less about writing more code and more about having broader organizational impact. Start making the invisible work visible.</p>",
+    "featured_image": "",
+    "category": 6,
+    "publish_date": "2026-02-23T09:56:03.368Z",
+    "created_date": "2026-02-28T09:56:03.369Z",
+    "updated_date": "2026-02-28T09:56:03.369Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 0
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 26,
+  "fields": {
+    "title": "System Design Interview: Complete Preparation Roadmap 2026",
+    "slug": "system-design-interview-complete-preparation-roadmap-2026",
+    "excerpt": "Cracking the System Design Interview\nSystem design interviews are the most challenging — and highest-leverage — part of senior engineering interviews. Unlike...",
+    "author": 3,
+    "body": "<h2>Cracking the System Design Interview</h2>\n<p>System design interviews are the most challenging — and highest-leverage — part of senior engineering interviews. Unlike coding problems, there's no single right answer. Interviewers evaluate your ability to think at scale, make trade-offs, and communicate clearly.</p>\n\n<h3>The Framework (Use This Every Time)</h3>\n<ol>\n<li><strong>Clarify requirements (5 min):</strong> Functional vs non-functional. Users, scale, latency targets.</li>\n<li><strong>High-level design (10 min):</strong> Draw the major components — clients, load balancers, services, databases, caches.</li>\n<li><strong>Deep dive (15 min):</strong> Pick 2-3 components and design them in detail.</li>\n<li><strong>Trade-offs & bottlenecks (5 min):</strong> Where will this break? How would you scale further?</li>\n</ol>\n\n<h3>Must-Know Building Blocks</h3>\n<table>\n<tr><th>Component</th><th>When to Use</th></tr>\n<tr><td>Load Balancer</td><td>Distribute traffic across servers</td></tr>\n<tr><td>CDN</td><td>Static assets, global content delivery</td></tr>\n<tr><td>Message Queue</td><td>Async processing, decoupling services</td></tr>\n<tr><td>Redis Cache</td><td>Reduce DB load, session storage</td></tr>\n<tr><td>Database Sharding</td><td>Horizontal scaling beyond single DB</td></tr>\n<tr><td>Consistent Hashing</td><td>Distributed cache, partition assignment</td></tr>\n</table>\n\n<h3>Top 10 Problems to Practice</h3>\n<ol>\n<li>Design URL Shortener (TinyURL)</li>\n<li>Design Twitter/X Feed</li>\n<li>Design WhatsApp/Chat System</li>\n<li>Design Netflix/YouTube Streaming</li>\n<li>Design Google Drive/Dropbox</li>\n<li>Design Rate Limiter</li>\n<li>Design Notification System</li>\n<li>Design Search Autocomplete</li>\n<li>Design Payment System</li>\n<li>Design Distributed Cache</li>\n</ol>\n\n<h3>Common Mistakes</h3>\n<ul>\n<li>Jumping into solution without clarifying requirements</li>\n<li>Over-engineering for scale you don't need yet</li>\n<li>Ignoring failure scenarios and edge cases</li>\n<li>Not discussing monitoring and observability</li>\n</ul>\n\n<p>Practice by designing one system per week. Draw it on a whiteboard, estimate numbers, and explain it out loud. The ability to communicate your design matters as much as the design itself.</p>",
+    "featured_image": "",
+    "category": 6,
+    "publish_date": "2026-02-19T09:56:03.429Z",
+    "created_date": "2026-02-28T09:56:03.429Z",
+    "updated_date": "2026-02-28T09:56:03.429Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 0
+  }
+},
+{
   "model": "blog.comment",
   "pk": 20,
   "fields": {
@@ -1464,6 +1654,278 @@
   }
 },
 {
+  "model": "taggit.tag",
+  "pk": 47,
+  "fields": {
+    "name": "rag",
+    "slug": "rag"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 48,
+  "fields": {
+    "name": "fine-tuning",
+    "slug": "fine-tuning"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 49,
+  "fields": {
+    "name": "machine-learning",
+    "slug": "machine-learning"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 50,
+  "fields": {
+    "name": "openai",
+    "slug": "openai"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 51,
+  "fields": {
+    "name": "tailwind",
+    "slug": "tailwind"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 52,
+  "fields": {
+    "name": "css",
+    "slug": "css"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 53,
+  "fields": {
+    "name": "web-development",
+    "slug": "web-development"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 54,
+  "fields": {
+    "name": "postgresql",
+    "slug": "postgresql"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 55,
+  "fields": {
+    "name": "database",
+    "slug": "database"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 56,
+  "fields": {
+    "name": "sql",
+    "slug": "sql"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 57,
+  "fields": {
+    "name": "backend",
+    "slug": "backend"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 58,
+  "fields": {
+    "name": "github-actions",
+    "slug": "github-actions"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 59,
+  "fields": {
+    "name": "ci-cd",
+    "slug": "ci-cd"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 60,
+  "fields": {
+    "name": "testing",
+    "slug": "testing"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 61,
+  "fields": {
+    "name": "terraform",
+    "slug": "terraform"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 62,
+  "fields": {
+    "name": "pulumi",
+    "slug": "pulumi"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 63,
+  "fields": {
+    "name": "iac",
+    "slug": "iac"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 64,
+  "fields": {
+    "name": "sqlite",
+    "slug": "sqlite"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 65,
+  "fields": {
+    "name": "offline-first",
+    "slug": "offline-first"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 66,
+  "fields": {
+    "name": "sync",
+    "slug": "sync"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 67,
+  "fields": {
+    "name": "accessibility",
+    "slug": "accessibility"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 68,
+  "fields": {
+    "name": "a11y",
+    "slug": "a11y"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 69,
+  "fields": {
+    "name": "ux",
+    "slug": "ux"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 70,
+  "fields": {
+    "name": "design",
+    "slug": "design"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 71,
+  "fields": {
+    "name": "wcag",
+    "slug": "wcag"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 72,
+  "fields": {
+    "name": "career",
+    "slug": "career"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 73,
+  "fields": {
+    "name": "staff-engineer",
+    "slug": "staff-engineer"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 74,
+  "fields": {
+    "name": "leadership",
+    "slug": "leadership"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 75,
+  "fields": {
+    "name": "growth",
+    "slug": "growth"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 76,
+  "fields": {
+    "name": "engineering",
+    "slug": "engineering"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 77,
+  "fields": {
+    "name": "system-design",
+    "slug": "system-design"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 78,
+  "fields": {
+    "name": "interview",
+    "slug": "interview"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 79,
+  "fields": {
+    "name": "distributed-systems",
+    "slug": "distributed-systems"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 80,
+  "fields": {
+    "name": "preparation",
+    "slug": "preparation"
+  }
+},
+{
   "model": "taggit.taggeditem",
   "pk": 5,
   "fields": {
@@ -1848,6 +2310,456 @@
     "tag": 46,
     "content_type": 10,
     "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 57,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 58,
+  "fields": {
+    "tag": 47,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 59,
+  "fields": {
+    "tag": 48,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 60,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 61,
+  "fields": {
+    "tag": 49,
+    "content_type": 10,
+    "object_id": 17
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 62,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 63,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 64,
+  "fields": {
+    "tag": 50,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 65,
+  "fields": {
+    "tag": 31,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 66,
+  "fields": {
+    "tag": 36,
+    "content_type": 10,
+    "object_id": 18
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 67,
+  "fields": {
+    "tag": 51,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 68,
+  "fields": {
+    "tag": 52,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 69,
+  "fields": {
+    "tag": 35,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 70,
+  "fields": {
+    "tag": 53,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 71,
+  "fields": {
+    "tag": 20,
+    "content_type": 10,
+    "object_id": 19
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 72,
+  "fields": {
+    "tag": 54,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 73,
+  "fields": {
+    "tag": 55,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 74,
+  "fields": {
+    "tag": 29,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 75,
+  "fields": {
+    "tag": 56,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 76,
+  "fields": {
+    "tag": 57,
+    "content_type": 10,
+    "object_id": 20
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 77,
+  "fields": {
+    "tag": 58,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 78,
+  "fields": {
+    "tag": 59,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 79,
+  "fields": {
+    "tag": 13,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 80,
+  "fields": {
+    "tag": 36,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 81,
+  "fields": {
+    "tag": 60,
+    "content_type": 10,
+    "object_id": 21
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 82,
+  "fields": {
+    "tag": 61,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 83,
+  "fields": {
+    "tag": 62,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 84,
+  "fields": {
+    "tag": 63,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 85,
+  "fields": {
+    "tag": 14,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 86,
+  "fields": {
+    "tag": 13,
+    "content_type": 10,
+    "object_id": 22
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 87,
+  "fields": {
+    "tag": 17,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 88,
+  "fields": {
+    "tag": 64,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 89,
+  "fields": {
+    "tag": 65,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 90,
+  "fields": {
+    "tag": 15,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 91,
+  "fields": {
+    "tag": 66,
+    "content_type": 10,
+    "object_id": 23
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 92,
+  "fields": {
+    "tag": 67,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 93,
+  "fields": {
+    "tag": 68,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 94,
+  "fields": {
+    "tag": 69,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 95,
+  "fields": {
+    "tag": 70,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 96,
+  "fields": {
+    "tag": 71,
+    "content_type": 10,
+    "object_id": 24
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 97,
+  "fields": {
+    "tag": 72,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 98,
+  "fields": {
+    "tag": 73,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 99,
+  "fields": {
+    "tag": 74,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 100,
+  "fields": {
+    "tag": 75,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 101,
+  "fields": {
+    "tag": 76,
+    "content_type": 10,
+    "object_id": 25
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 102,
+  "fields": {
+    "tag": 77,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 103,
+  "fields": {
+    "tag": 78,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 104,
+  "fields": {
+    "tag": 72,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 105,
+  "fields": {
+    "tag": 79,
+    "content_type": 10,
+    "object_id": 26
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 106,
+  "fields": {
+    "tag": 80,
+    "content_type": 10,
+    "object_id": 26
   }
 }
 ]
