@@ -1,0 +1,1853 @@
+[
+{
+  "model": "blog.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$t22xYcHu03vPjndXeOpCLi$BCkmeGYIOmOAu0oboEmmceXyGYkS9TkadVwp2MLl7mQ=",
+    "last_login": "2025-06-28T15:19:52.444Z",
+    "is_superuser": true,
+    "username": "Abhi",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-09T12:32:37.857Z",
+    "email": "admin@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Pe3Lxjdi9ZmX1xPBEt0Ntl$wF8ZmpDff5RCn197pZmXmCM1PVAGzdPV9ZsN6oInSDA=",
+    "last_login": "2026-02-11T06:25:12.971Z",
+    "is_superuser": false,
+    "username": "Jeet",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-09T15:08:55.757Z",
+    "email": "abhi@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nEYyQjGJwAIaIAQugSAwNQ$i07PyOUTRzG9LZOGxhNXExlf9Rg4XT0OKfmoWgLa/cg=",
+    "last_login": "2025-08-30T09:54:28.618Z",
+    "is_superuser": false,
+    "username": "Kumar",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-09T15:11:13.051Z",
+    "email": "Kumar@gmail.com",
+    "role": "author",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$usiEHBABUaH1qfLtiduy66$KjlWdICYSzIZSsLJmd0oFxn6Ix93yWjg21yHdA/d+XA=",
+    "last_login": "2025-08-26T17:19:00.524Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-10T11:45:57Z",
+    "email": "user@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Bbukhabq0YgplryIyOdIWW$kIfETGaTClWC/JYLU5U+NpxdeytzSfCiyp9+KYB0y60=",
+    "last_login": "2025-08-30T11:02:40.417Z",
+    "is_superuser": false,
+    "username": "Abc",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-26T17:41:26.976Z",
+    "email": "Abc@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$QoGgMY307oeR81C9TK6esR$3fzZ307YOy9lrG/geAOzmjkwfb4pa7VURzNXPuzB+ok=",
+    "last_login": "2025-08-30T12:09:08.371Z",
+    "is_superuser": false,
+    "username": "new",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-08-30T11:03:39.805Z",
+    "email": "new@new.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$eTeIMY1UG9q7RtI0YySLpo$/z2Fkwr/dgbJxYVTqzE90VYs7Mfo/exgQDQYxa3jomE=",
+    "last_login": "2026-02-11T06:26:24.797Z",
+    "is_superuser": false,
+    "username": "hasan",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-11T06:26:07.892Z",
+    "email": "hasan@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ZlzP9gvi1qQuCwBJAkasl0$NxT852vFlNc1XflFfTOIxK/LjFgX/xwdBV/5s/gjLt8=",
+    "last_login": "2026-02-11T09:28:11.600Z",
+    "is_superuser": true,
+    "username": "jack",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-11T07:18:43.754Z",
+    "email": "abhijeet2672004@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$LlVceuFxsBlkZ6ZFZFhL1w$unP77IYv5F6v+98IXEDw54h1Z9dSB2iYtxTUQiwdSHQ=",
+    "last_login": "2026-02-28T06:03:46.134Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-28T05:17:36.725Z",
+    "email": "admin@example.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RUBF3jSYk9POnNTM6hPLPZ$gmpiof1GK0d+R01BnowdknW/IKjJt0zyI2QDCScALK0=",
+    "last_login": "2026-02-28T06:00:10.860Z",
+    "is_superuser": false,
+    "username": "abhi9kumarabhi",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-28T05:19:04.863Z",
+    "email": "abhi9kumarabhi@gmail.com",
+    "role": "reader",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.user",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$G4ryNxtYZ46DmVIh9uhsSg$KVfsAA9aU9lfCYck6N6Ehq7vDfwQH9s2kwbgmxWInrU=",
+    "last_login": "2026-02-28T08:26:50.972Z",
+    "is_superuser": false,
+    "username": "abhinav.kumar22b",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-28T08:26:31.906Z",
+    "email": "abhinav.kumar22b@iiitg.ac.in",
+    "role": "author",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 1,
+  "fields": {
+    "user": 3,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": true,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 2,
+  "fields": {
+    "user": 2,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": true,
+    "subscription_end_date": "2025-07-15",
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 5,
+  "fields": {
+    "user": 4,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": true,
+    "subscription_end_date": "2025-07-15",
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 6,
+  "fields": {
+    "user": 6,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 7,
+  "fields": {
+    "user": 7,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": true,
+    "subscription_end_date": "2025-09-29",
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 8,
+  "fields": {
+    "user": 8,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 9,
+  "fields": {
+    "user": 9,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 10,
+  "fields": {
+    "user": 10,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 11,
+  "fields": {
+    "user": 11,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.profile",
+  "pk": 18,
+  "fields": {
+    "user": 18,
+    "bio": "",
+    "avatar": "",
+    "is_subscribed": false,
+    "subscription_end_date": null,
+    "follows": []
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 1,
+  "fields": {
+    "name": "Web Development",
+    "slug": "web-development",
+    "description": "Tutorials and guides on building modern web applications",
+    "icon": "code"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 2,
+  "fields": {
+    "name": "AI & Machine Learning",
+    "slug": "ai-machine-learning",
+    "description": "Explore the world of artificial intelligence and ML",
+    "icon": "cpu"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 3,
+  "fields": {
+    "name": "DevOps & Cloud",
+    "slug": "devops-cloud",
+    "description": "Infrastructure, deployment, and cloud computing",
+    "icon": "cloud"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 4,
+  "fields": {
+    "name": "Mobile Development",
+    "slug": "mobile-development",
+    "description": "Build beautiful native and cross-platform mobile apps",
+    "icon": "device-phone"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 5,
+  "fields": {
+    "name": "UI/UX Design",
+    "slug": "ui-ux-design",
+    "description": "Design principles, tools, and best practices",
+    "icon": "palette"
+  }
+},
+{
+  "model": "blog.category",
+  "pk": 6,
+  "fields": {
+    "name": "Career & Productivity",
+    "slug": "career-productivity",
+    "description": "Level up your developer career and workflow",
+    "icon": "rocket"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Building a REST API with Django & DRF in 2026",
+    "slug": "building-rest-api-django-drf-2026",
+    "excerpt": "Building robust APIs is a fundamental skill for any backend developer. Django REST Framework (DRF) makes it incredibly easy to build well-structured,...",
+    "author": 3,
+    "body": "Building robust APIs is a fundamental skill for any backend developer. Django REST Framework (DRF) makes it incredibly easy to build well-structured, performant APIs with minimal boilerplate.\n\n## Getting Started\n\nFirst, install Django and DRF:\n\n```bash\npip install django djangorestframework\n```\n\n## Creating Your First Serializer\n\nSerializers in DRF work similarly to Django forms. They handle the conversion between complex data types (like querysets and model instances) and Python datatypes that can be rendered into JSON.\n\n```python\nfrom rest_framework import serializers\nfrom .models import Article\n\nclass ArticleSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Article\n        fields = ['id', 'title', 'body', 'author', 'created_at']\n```\n\n## ViewSets and Routers\n\nViewSets combine the logic for a set of related views in a single class. A Router automatically determines the URL configuration.\n\n```python\nfrom rest_framework import viewsets\nfrom .models import Article\nfrom .serializers import ArticleSerializer\n\nclass ArticleViewSet(viewsets.ModelViewSet):\n    queryset = Article.objects.all()\n    serializer_class = ArticleSerializer\n```\n\n## Authentication & Permissions\n\nDRF provides flexible authentication and permission systems out of the box. You can use token authentication, JWT, session auth, or build custom backends.\n\n## Pagination & Filtering\n\nConfigure global pagination in settings, and use django-filter for advanced filtering capabilities. This ensures your API remains performant even with large datasets.\n\n## Best Practices\n\n1. **Version your API** - Use URL versioning or header-based versioning\n2. **Use proper HTTP status codes** - 201 for creation, 204 for deletion\n3. **Document with OpenAPI/Swagger** - Use drf-spectacular for auto-generated docs\n4. **Write tests** - DRF provides excellent test utilities\n5. **Cache responses** - Use Redis or Memcached for frequently accessed endpoints\n\nBuilding APIs with Django and DRF gives you the power of Django ORM, admin panel, and the vast Python ecosystem while maintaining clean, RESTful architecture.",
+    "featured_image": "post_images/building-rest-api-django-drf-2026.jpg",
+    "category": 1,
+    "publish_date": "2026-02-09T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.257Z",
+    "updated_date": "2026-02-10T07:07:57.257Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 1259
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "The Complete Guide to Prompt Engineering for Developers",
+    "slug": "complete-guide-prompt-engineering-developers",
+    "excerpt": "Prompt engineering has become an essential skill for developers working with large language models. Whether you are building AI-powered features or just using...",
+    "author": 3,
+    "body": "Prompt engineering has become an essential skill for developers working with large language models. Whether you are building AI-powered features or just using AI tools more effectively, understanding how to craft effective prompts is crucial.\n\n## What is Prompt Engineering?\n\nPrompt engineering is the art and science of designing inputs that guide AI models to produce desired outputs. It is about communicating clearly with AI systems to get the best possible results.\n\n## Key Techniques\n\n### 1. Be Specific and Clear\nVague prompts lead to vague outputs. Instead of asking \"write code,\" specify the language, framework, constraints, and expected behavior.\n\n### 2. Use System Prompts Effectively\nSystem prompts set the context and personality for the AI. Define the role, expertise level, and output format upfront.\n\n### 3. Chain of Thought (CoT)\nAsk the model to think step by step. This dramatically improves reasoning accuracy for complex problems.\n\n### 4. Few-Shot Learning\nProvide examples of the input-output pairs you expect. This teaches the model the pattern without any fine-tuning.\n\n### 5. Output Formatting\nSpecify exactly how you want the output structured - JSON, markdown, tables, or code blocks. This makes parsing and integration much easier.\n\n## Advanced Patterns\n\n- **ReAct Pattern** - Combine reasoning with action steps\n- **Tree of Thought** - Explore multiple reasoning paths simultaneously\n- **Constitutional AI** - Build safety and guidelines into your prompts\n- **RAG Integration** - Combine retrieval with generation for factual accuracy\n\n## Practical Applications\n\nDevelopers are using prompt engineering to build intelligent search, code review tools, automated documentation, customer support bots, and data analysis pipelines.\n\nThe key is to iterate on your prompts just like you iterate on code. Test, measure, refine, and repeat until you get consistent, high-quality outputs.",
+    "featured_image": "post_images/complete-guide-prompt-engineering-developers.jpg",
+    "category": 2,
+    "publish_date": "2026-02-08T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.323Z",
+    "updated_date": "2026-02-10T07:07:57.323Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 3896
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Docker & Kubernetes: A Practical Production Guide",
+    "slug": "docker-kubernetes-practical-production-guide",
+    "excerpt": "Containerization has revolutionized how we deploy and manage applications. This guide covers everything you need to know to run production-grade workloads with...",
+    "author": 3,
+    "body": "Containerization has revolutionized how we deploy and manage applications. This guide covers everything you need to know to run production-grade workloads with Docker and Kubernetes.\n\n## Docker Fundamentals\n\nDocker packages your application and its dependencies into lightweight, portable containers that run consistently across any environment.\n\n### Multi-Stage Builds\n\nUse multi-stage builds to create minimal production images. Start with a builder stage that compiles dependencies, then copy only the runtime artifacts into a slim final image. This dramatically reduces your image size.\n\n## Kubernetes Architecture\n\nKubernetes orchestrates your containers across a cluster of machines, handling scaling, networking, storage, and self-healing.\n\n### Key Components\n- **Pods** - The smallest deployable unit\n- **Services** - Stable networking for pods\n- **Deployments** - Declarative updates and rollbacks\n- **Ingress** - HTTP routing and load balancing\n- **ConfigMaps & Secrets** - Configuration management\n\n## Production Essentials\n\n1. **Health Checks** - Configure liveness and readiness probes\n2. **Resource Limits** - Set CPU and memory limits to prevent noisy neighbors\n3. **Horizontal Pod Autoscaler** - Scale based on CPU, memory, or custom metrics\n4. **Rolling Updates** - Zero-downtime deployments with rollback capability\n5. **Monitoring** - Use Prometheus + Grafana for observability\n\n## Security Best Practices\n\n- Run containers as non-root users\n- Scan images for vulnerabilities with Trivy\n- Use network policies to restrict pod communication\n- Rotate secrets regularly with external secret managers\n\nMastering Docker and Kubernetes opens up a world of scalable, resilient infrastructure that can handle millions of users.",
+    "featured_image": "post_images/docker-kubernetes-practical-production-guide.jpg",
+    "category": 3,
+    "publish_date": "2026-02-07T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.384Z",
+    "updated_date": "2026-02-10T07:07:57.384Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 2166
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "React Native vs Flutter in 2026: Which Should You Choose?",
+    "slug": "react-native-vs-flutter-2026-comparison",
+    "excerpt": "The cross-platform mobile development landscape continues to evolve rapidly. Both React Native and Flutter have matured significantly, but which one is right...",
+    "author": 3,
+    "body": "The cross-platform mobile development landscape continues to evolve rapidly. Both React Native and Flutter have matured significantly, but which one is right for your next project? Let us dive into a comprehensive comparison.\n\n## Performance\n\nFlutter compiles to native ARM code and uses its own rendering engine (Impeller), delivering near-native performance with smooth 120fps animations. React Native has closed the gap significantly with the New Architecture (Fabric + TurboModules), offering true concurrent rendering and direct native module access.\n\n## Developer Experience\n\n### React Native\n- Leverages existing JavaScript/TypeScript skills\n- Hot reload for instant feedback\n- Massive npm ecosystem\n- Expo for rapid prototyping and deployment\n- Strong integration with web codebases\n\n### Flutter\n- Dart language with excellent tooling\n- Hot reload built-in from day one\n- Rich widget library with Material 3 and Cupertino styles\n- Consistent rendering across all platforms\n- Growing package ecosystem (pub.dev)\n\n## Community & Ecosystem\n\nReact Native benefits from the vast JavaScript ecosystem and Meta backing. Flutter has Google support and one of the fastest-growing open-source communities. Both have excellent documentation and active contributor bases.\n\n## When to Choose React Native\n- Your team knows JavaScript/TypeScript well\n- You want to share code with a React web app\n- You need deep integration with existing native codebases\n- Your app relies heavily on native platform APIs\n\n## When to Choose Flutter\n- You want pixel-perfect UI consistency across platforms\n- Performance for complex animations is critical\n- You are starting a greenfield project\n- You value the integrated widget-based architecture\n\n## The Verdict\n\nThere is no wrong choice in 2026. Both frameworks are production-ready and battle-tested by major companies. Choose based on your team skills, project requirements, and long-term architecture goals.",
+    "featured_image": "post_images/react-native-vs-flutter-2026-comparison.jpg",
+    "category": 4,
+    "publish_date": "2026-02-06T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.448Z",
+    "updated_date": "2026-02-10T07:07:57.448Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 5430
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 7,
+  "fields": {
+    "title": "Design Systems That Scale: From Tokens to Components",
+    "slug": "design-systems-that-scale-tokens-components",
+    "excerpt": "A well-crafted design system is the backbone of consistent, scalable user interfaces. This guide walks through building a design system from the ground up,...",
+    "author": 3,
+    "body": "A well-crafted design system is the backbone of consistent, scalable user interfaces. This guide walks through building a design system from the ground up, from design tokens to production-ready components.\n\n## What Are Design Tokens?\n\nDesign tokens are the atomic building blocks of your visual design - colors, typography, spacing, shadows, and motion values stored in a platform-agnostic format.\n\n## Component Architecture\n\nBuild components in layers of increasing complexity:\n\n1. **Primitives** - Box, Text, Stack, Icon\n2. **Elements** - Button, Input, Badge, Avatar\n3. **Patterns** - Card, Form Group, Navbar, Modal\n4. **Templates** - Page layouts, dashboard shells\n\n## Figma to Code Pipeline\n\nUse tools like Figma Tokens, Style Dictionary, and custom transforms to keep your design files and codebase in sync. Automate the pipeline so designers can update tokens and developers get the changes automatically.\n\n## Accessibility First\n\nEvery component should be built with accessibility baked in - proper ARIA attributes, keyboard navigation, focus management, color contrast ratios, and screen reader support. This is not optional.\n\n## Documentation & Adoption\n\nA design system without documentation is just a component library. Build a living documentation site with interactive examples, usage guidelines, and do/do-not patterns. Make it easy for your team to adopt.\n\n## Measuring Success\n\nTrack adoption rates, component usage analytics, design-to-development handoff time, and visual consistency scores. A design system is a product - treat it like one.",
+    "featured_image": "post_images/design-systems-that-scale-tokens-components.jpg",
+    "category": 5,
+    "publish_date": "2026-02-05T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.510Z",
+    "updated_date": "2026-02-10T07:07:57.510Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 1838
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 8,
+  "fields": {
+    "title": "10 VS Code Extensions Every Developer Needs in 2026",
+    "slug": "10-vscode-extensions-every-developer-needs-2026",
+    "excerpt": "Visual Studio Code continues to dominate as the most popular code editor. Here are 10 extensions that will supercharge your development workflow in 2026.\n\n##...",
+    "author": 3,
+    "body": "Visual Studio Code continues to dominate as the most popular code editor. Here are 10 extensions that will supercharge your development workflow in 2026.\n\n## 1. GitHub Copilot\n\nAI-powered code completion that understands context across your entire project. The agent mode now handles multi-file edits, terminal commands, and even debugging autonomously.\n\n## 2. Error Lens\n\nHighlights errors and warnings inline, right next to the problematic code. No more squinting at the problems panel - issues are visible immediately.\n\n## 3. Thunder Client\n\nA lightweight REST API client built directly into VS Code. Test your APIs without leaving the editor, with support for collections, environments, and CI integration.\n\n## 4. GitLens\n\nSupercharges the built-in Git capabilities. See blame annotations, file history, compare branches, and visualize repository insights all within the editor.\n\n## 5. Prettier\n\nAutomatic code formatting that keeps your codebase consistent. Configure once, format everywhere - supports JavaScript, TypeScript, CSS, HTML, JSON, and more.\n\n## 6. ESLint\n\nStatic analysis for JavaScript and TypeScript. Catches bugs, enforces coding standards, and auto-fixes many issues on save.\n\n## 7. Docker\n\nManage containers, images, and compose files directly from VS Code. Build, run, and debug containerized applications without touching the terminal.\n\n## 8. Live Share\n\nReal-time collaborative editing with audio chat. Perfect for pair programming, code reviews, and teaching - regardless of location.\n\n## 9. Tailwind CSS IntelliSense\n\nAutocomplete for Tailwind CSS classes, hover previews, and linting. Essential if you use Tailwind for styling.\n\n## 10. REST Client\n\nSend HTTP requests directly from .http files in your editor. Great for API documentation and testing with version-controlled request files.\n\n## Bonus: Settings Sync\n\nYour VS Code settings, extensions, and keybindings stay in sync across all your machines. Set up once, code anywhere.\n\nThese extensions collectively save hours each week and make the development experience significantly more enjoyable.",
+    "featured_image": "post_images/10-vscode-extensions-every-developer-needs-2026.jpg",
+    "category": 6,
+    "publish_date": "2026-02-10T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.573Z",
+    "updated_date": "2026-02-10T07:07:57.573Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 8729
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 9,
+  "fields": {
+    "title": "Mastering Python Async: Concurrency Made Simple",
+    "slug": "mastering-python-async-concurrency-made-simple",
+    "excerpt": "Asynchronous programming in Python has come a long way. With asyncio matured and async frameworks thriving, it is time to master concurrent Python for...",
+    "author": 3,
+    "body": "Asynchronous programming in Python has come a long way. With asyncio matured and async frameworks thriving, it is time to master concurrent Python for high-performance applications.\n\n## Why Async?\n\nTraditional synchronous Python processes one request at a time. When your code waits for I/O (database queries, API calls, file reads), it blocks the entire thread. Async programming lets you handle thousands of concurrent operations by switching between tasks during I/O waits.\n\n## Key Concepts\n\n### Tasks and Coroutines\nCoroutines are defined with async def and must be awaited. Tasks wrap coroutines for concurrent execution within the event loop.\n\n### Semaphores for Rate Limiting\nControl concurrency with semaphores to avoid overwhelming external services.\n\n### Async Context Managers\nUse async with for resources that need async setup and teardown - database connections, HTTP sessions, file handles.\n\n## Real-World Patterns\n\n- **Fan-out/Fan-in** - Dispatch many async tasks, collect all results\n- **Producer/Consumer** - Use asyncio.Queue for decoupled pipelines\n- **Timeout Handling** - Use asyncio.wait_for to prevent hanging operations\n- **Graceful Shutdown** - Cancel pending tasks on shutdown signals\n\n## When NOT to Use Async\n\nAsync shines for I/O-bound workloads. For CPU-intensive tasks, use multiprocessing instead. Mixing both with ProcessPoolExecutor gives you the best of both worlds.\n\nUnderstanding async Python unlocks massive performance gains for web servers, data pipelines, and any I/O-heavy application.",
+    "featured_image": "post_images/mastering-python-async-concurrency-made-simple.jpg",
+    "category": 1,
+    "publish_date": "2026-02-04T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.634Z",
+    "updated_date": "2026-02-10T07:07:57.634Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 2943
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 10,
+  "fields": {
+    "title": "Building AI Agents with LangChain and LangGraph",
+    "slug": "building-ai-agents-langchain-langgraph",
+    "excerpt": "AI agents represent the next evolution beyond simple chatbots. They can plan, reason, use tools, and complete complex multi-step tasks autonomously. LangChain...",
+    "author": 3,
+    "body": "AI agents represent the next evolution beyond simple chatbots. They can plan, reason, use tools, and complete complex multi-step tasks autonomously. LangChain and LangGraph provide the building blocks.\n\n## What Are AI Agents?\n\nAn AI agent is a system that uses an LLM as its reasoning engine to decide which actions to take, execute those actions, observe results, and iterate until a goal is achieved.\n\n## LangChain Fundamentals\n\nLangChain provides the primitives for building LLM applications:\n\n- **Models** - Unified interface for OpenAI, Anthropic, local models\n- **Prompts** - Template management with variables and few-shot examples\n- **Chains** - Compose multiple LLM calls and operations\n- **Memory** - Maintain conversation context across interactions\n- **Tools** - Give LLMs the ability to interact with external systems\n\n## LangGraph for Stateful Agents\n\nLangGraph extends LangChain with graph-based orchestration, perfect for building complex agent workflows:\n\n- Cyclic graphs with conditional routing\n- Persistent state management\n- Human-in-the-loop interaction points\n- Parallel tool execution\n- Streaming intermediate results\n\n## Production Considerations\n\n- **Observability** - Use LangSmith for tracing and debugging\n- **Guardrails** - Implement output validators and safety checks\n- **Cost Management** - Cache responses, use cheaper models for simple tasks\n- **Error Recovery** - Design retry logic and fallback paths\n- **Testing** - Create evaluation datasets and benchmark agent performance\n\n## The Future\n\nAI agents are moving toward more autonomous operation with better planning, tool creation, and multi-agent collaboration. The frameworks are evolving rapidly, making this an exciting space to build in.",
+    "featured_image": "post_images/building-ai-agents-langchain-langgraph.jpg",
+    "category": 2,
+    "publish_date": "2026-02-03T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.689Z",
+    "updated_date": "2026-02-10T07:07:57.690Z",
+    "status": "published",
+    "access_level": "premium",
+    "view_count": 4567
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 11,
+  "fields": {
+    "title": "Next.js 15: Server Components and the Future of React",
+    "slug": "nextjs-15-server-components-future-react",
+    "excerpt": "Next.js 15 has solidified React Server Components as the default way to build React applications. This paradigm shift changes how we think about rendering,...",
+    "author": 3,
+    "body": "Next.js 15 has solidified React Server Components as the default way to build React applications. This paradigm shift changes how we think about rendering, data fetching, and performance.\n\n## Server Components by Default\n\nIn Next.js 15, every component is a Server Component unless you explicitly add the \"use client\" directive. This means components render on the server, sending only HTML to the browser - zero JavaScript for most of your UI.\n\n## The App Router\n\nThe App Router uses file-system based routing with powerful conventions:\n- page.tsx - Route components\n- layout.tsx - Shared layouts with nested rendering\n- loading.tsx - Streaming loading states\n- error.tsx - Error boundaries\n- not-found.tsx - 404 pages\n\n## Data Fetching Revolution\n\nForget useEffect and client-side fetching. Server Components can fetch data directly. No loading states, no error handling boilerplate, no client-side waterfalls.\n\n## Server Actions\n\nServer Actions let you call server-side functions directly from client components. They handle form submissions, data mutations, and cache revalidation seamlessly.\n\n## Partial Prerendering\n\nNext.js 15 introduces Partial Prerendering - static shells with dynamic holes. The static parts are served instantly from the CDN while dynamic content streams in.\n\n## Migration Tips\n\n1. Start with leaf components when migrating\n2. Keep interactive components small and client-only\n3. Move data fetching to Server Components\n4. Use Server Actions for mutations\n5. Leverage streaming for progressive loading\n\nNext.js 15 delivers on the promise of the best developer experience with the best user experience. The future of React is here.",
+    "featured_image": "post_images/nextjs-15-server-components-future-react.jpg",
+    "category": 1,
+    "publish_date": "2026-02-02T07:07:57.256Z",
+    "created_date": "2026-02-10T07:07:57.739Z",
+    "updated_date": "2026-02-10T07:07:57.739Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 6238
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 16,
+  "fields": {
+    "title": "Understanding Gradient Descent Step by Step",
+    "slug": "understanding-gradient-descent-step-by-step",
+    "excerpt": "Preparing for a QA Intern interview? Here are the top 5 practical tips to help you crack technical rounds, impress interviewers, and stand out from other candidates.",
+    "author": 18,
+    "body": "If you're preparing for a QA (Quality Assurance) Intern interview, you're already one step ahead. QA roles are crucial in software development, and companies look for candidates who have strong fundamentals, attention to detail, and problem-solving skills.\r\n\r\nHere are the top 5 tips to help you crack your QA Intern interview confidently.\r\n\r\n1️⃣ Understand Software Testing Fundamentals\r\n\r\nMake sure you are clear with basic concepts:\r\n\r\nWhat is Software Testing?\r\n\r\nDifference between Manual Testing vs Automation Testing\r\n\r\nWhat is SDLC & STLC?\r\n\r\nTypes of Testing (Unit, Integration, System, UAT)\r\n\r\nBlack Box vs White Box Testing\r\n\r\nBug Life Cycle\r\n\r\nInterviewers usually start with fundamentals. If your basics are strong, you automatically gain confidence.\r\n\r\n2️⃣ Be Clear with Test Cases & Bug Reporting\r\n\r\nYou should know:\r\n\r\nHow to write proper test cases\r\n\r\nWhat makes a good test case\r\n\r\nHow to write clear and reproducible bug reports\r\n\r\nCommon question:\r\n\r\nHow would you test a login page?\r\n\r\nPrepare structured answers with:\r\n\r\nPositive test cases\r\n\r\nNegative test cases\r\n\r\nEdge cases\r\n\r\n3️⃣ Learn Basic Tools (Even If You Are a Fresher)\r\n\r\nEven for internships, knowing tools gives you an edge:\r\n\r\nJira (bug tracking)\r\n\r\nPostman (API testing basics)\r\n\r\nSelenium (basic idea)\r\n\r\nBrowser DevTools\r\n\r\nYou don't need to be an expert — just show that you've explored them.",
+    "featured_image": "",
+    "category": 6,
+    "publish_date": "2026-02-28T08:31:20.710Z",
+    "created_date": "2026-02-28T08:31:20.713Z",
+    "updated_date": "2026-02-28T08:31:20.713Z",
+    "status": "published",
+    "access_level": "free",
+    "view_count": 4
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 20,
+  "fields": {
+    "post": 8,
+    "author": 1,
+    "body": "Great tutorial! DRF is amazing for building APIs quickly.",
+    "created_date": "2026-02-10T07:08:18.231Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 21,
+  "fields": {
+    "post": 8,
+    "author": 2,
+    "body": "This helped me set up my first API. Thanks!",
+    "created_date": "2026-02-10T07:08:18.237Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 22,
+  "fields": {
+    "post": 3,
+    "author": 3,
+    "body": "Prompt engineering is such an underrated skill. Bookmarked this.",
+    "created_date": "2026-02-10T07:08:18.243Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 23,
+  "fields": {
+    "post": 5,
+    "author": 1,
+    "body": "I switched from React Native to Flutter last year and never looked back.",
+    "created_date": "2026-02-10T07:08:18.250Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 24,
+  "fields": {
+    "post": 5,
+    "author": 4,
+    "body": "Both are great choices honestly. Depends on the team.",
+    "created_date": "2026-02-10T07:08:18.256Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 25,
+  "fields": {
+    "post": 7,
+    "author": 2,
+    "body": "Error Lens is a game changer! Cannot code without it now.",
+    "created_date": "2026-02-10T07:08:18.261Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 26,
+  "fields": {
+    "post": 7,
+    "author": 6,
+    "body": "Would add Vim extension to this list too!",
+    "created_date": "2026-02-10T07:08:18.267Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 27,
+  "fields": {
+    "post": 11,
+    "author": 1,
+    "body": "Server components changed everything for our production app.",
+    "created_date": "2026-02-10T07:08:18.273Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 28,
+  "fields": {
+    "post": 10,
+    "author": 2,
+    "body": "LangGraph is incredible for building complex workflows.",
+    "created_date": "2026-02-10T07:08:18.280Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 29,
+  "fields": {
+    "post": 4,
+    "author": 4,
+    "body": "Kubernetes learning curve is steep but so worth it.",
+    "created_date": "2026-02-10T07:08:18.286Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 30,
+  "fields": {
+    "post": 9,
+    "author": 3,
+    "body": "Async Python is a must-know for any backend dev in 2026.",
+    "created_date": "2026-02-10T07:08:18.292Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 31,
+  "fields": {
+    "post": 6,
+    "author": 1,
+    "body": "Design tokens are the foundation of any good design system.",
+    "created_date": "2026-02-10T07:08:18.297Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 34,
+  "fields": {
+    "post": 3,
+    "author": 11,
+    "body": "This was very helpful for me in learning Django",
+    "created_date": "2026-02-28T08:17:06.594Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.comment",
+  "pk": 35,
+  "fields": {
+    "post": 5,
+    "author": 11,
+    "body": "Very helpful",
+    "created_date": "2026-02-28T08:18:01.235Z",
+    "parent": null
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 13,
+  "fields": {
+    "post": 8,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:17.974Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 14,
+  "fields": {
+    "post": 8,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:17.982Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 15,
+  "fields": {
+    "post": 8,
+    "user": 7,
+    "created_date": "2026-02-10T07:08:17.989Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 16,
+  "fields": {
+    "post": 8,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:17.996Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 17,
+  "fields": {
+    "post": 8,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.003Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 18,
+  "fields": {
+    "post": 8,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.009Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 19,
+  "fields": {
+    "post": 3,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.017Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 20,
+  "fields": {
+    "post": 3,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.024Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 21,
+  "fields": {
+    "post": 4,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.030Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 22,
+  "fields": {
+    "post": 4,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:18.036Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 23,
+  "fields": {
+    "post": 4,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:18.044Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 24,
+  "fields": {
+    "post": 4,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.050Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 25,
+  "fields": {
+    "post": 4,
+    "user": 7,
+    "created_date": "2026-02-10T07:08:18.057Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 26,
+  "fields": {
+    "post": 5,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.063Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 27,
+  "fields": {
+    "post": 5,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:18.070Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 28,
+  "fields": {
+    "post": 5,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.078Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 29,
+  "fields": {
+    "post": 6,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:18.084Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 30,
+  "fields": {
+    "post": 6,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.091Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 31,
+  "fields": {
+    "post": 6,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.098Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 32,
+  "fields": {
+    "post": 6,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.106Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 33,
+  "fields": {
+    "post": 6,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:18.112Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 34,
+  "fields": {
+    "post": 7,
+    "user": 7,
+    "created_date": "2026-02-10T07:08:18.119Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 35,
+  "fields": {
+    "post": 7,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.127Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 36,
+  "fields": {
+    "post": 7,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:18.134Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 37,
+  "fields": {
+    "post": 7,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.140Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 38,
+  "fields": {
+    "post": 9,
+    "user": 7,
+    "created_date": "2026-02-10T07:08:18.146Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 39,
+  "fields": {
+    "post": 9,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.153Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 40,
+  "fields": {
+    "post": 9,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:18.160Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 41,
+  "fields": {
+    "post": 9,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:18.167Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 42,
+  "fields": {
+    "post": 9,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.173Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 43,
+  "fields": {
+    "post": 10,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.180Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 44,
+  "fields": {
+    "post": 10,
+    "user": 7,
+    "created_date": "2026-02-10T07:08:18.187Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 45,
+  "fields": {
+    "post": 10,
+    "user": 1,
+    "created_date": "2026-02-10T07:08:18.193Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 46,
+  "fields": {
+    "post": 10,
+    "user": 2,
+    "created_date": "2026-02-10T07:08:18.199Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 47,
+  "fields": {
+    "post": 10,
+    "user": 6,
+    "created_date": "2026-02-10T07:08:18.206Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 48,
+  "fields": {
+    "post": 10,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.212Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 49,
+  "fields": {
+    "post": 11,
+    "user": 4,
+    "created_date": "2026-02-10T07:08:18.219Z"
+  }
+},
+{
+  "model": "blog.like",
+  "pk": 50,
+  "fields": {
+    "post": 11,
+    "user": 3,
+    "created_date": "2026-02-10T07:08:18.225Z"
+  }
+},
+{
+  "model": "blog.bookmark",
+  "pk": 3,
+  "fields": {
+    "post": 5,
+    "user": 11,
+    "created_date": "2026-02-28T08:17:36.026Z"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "#Django",
+    "slug": "django"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "#Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "django",
+    "slug": "django_1"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "python",
+    "slug": "python_1"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "api",
+    "slug": "api"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "rest",
+    "slug": "rest"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "ai",
+    "slug": "ai"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "llm",
+    "slug": "llm"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "prompt-engineering",
+    "slug": "prompt-engineering"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "chatgpt",
+    "slug": "chatgpt"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 11,
+  "fields": {
+    "name": "docker",
+    "slug": "docker"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 12,
+  "fields": {
+    "name": "kubernetes",
+    "slug": "kubernetes"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 13,
+  "fields": {
+    "name": "devops",
+    "slug": "devops"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 14,
+  "fields": {
+    "name": "cloud",
+    "slug": "cloud"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 15,
+  "fields": {
+    "name": "react-native",
+    "slug": "react-native"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 16,
+  "fields": {
+    "name": "flutter",
+    "slug": "flutter"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 17,
+  "fields": {
+    "name": "mobile",
+    "slug": "mobile"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 18,
+  "fields": {
+    "name": "cross-platform",
+    "slug": "cross-platform"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 19,
+  "fields": {
+    "name": "design-systems",
+    "slug": "design-systems"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 20,
+  "fields": {
+    "name": "ui",
+    "slug": "ui"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 21,
+  "fields": {
+    "name": "figma",
+    "slug": "figma"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 22,
+  "fields": {
+    "name": "components",
+    "slug": "components"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 23,
+  "fields": {
+    "name": "vscode",
+    "slug": "vscode"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 24,
+  "fields": {
+    "name": "productivity",
+    "slug": "productivity"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 25,
+  "fields": {
+    "name": "tools",
+    "slug": "tools"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 26,
+  "fields": {
+    "name": "developer",
+    "slug": "developer"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 27,
+  "fields": {
+    "name": "async",
+    "slug": "async"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 28,
+  "fields": {
+    "name": "concurrency",
+    "slug": "concurrency"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 29,
+  "fields": {
+    "name": "performance",
+    "slug": "performance"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 30,
+  "fields": {
+    "name": "langchain",
+    "slug": "langchain"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 31,
+  "fields": {
+    "name": "agents",
+    "slug": "agents"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 32,
+  "fields": {
+    "name": "nextjs",
+    "slug": "nextjs"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 33,
+  "fields": {
+    "name": "react",
+    "slug": "react"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 34,
+  "fields": {
+    "name": "javascript",
+    "slug": "javascript"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 35,
+  "fields": {
+    "name": "frontend",
+    "slug": "frontend"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 36,
+  "fields": {
+    "name": "automation",
+    "slug": "automation"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 37,
+  "fields": {
+    "name": "test",
+    "slug": "test"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 38,
+  "fields": {
+    "name": "premium",
+    "slug": "premium"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 39,
+  "fields": {
+    "name": "updated",
+    "slug": "updated"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 40,
+  "fields": {
+    "name": "QA engineer",
+    "slug": "qa-engineer"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 41,
+  "fields": {
+    "name": "automation testing",
+    "slug": "automation-testing"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 42,
+  "fields": {
+    "name": "fresher jobs",
+    "slug": "fresher-jobs"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 43,
+  "fields": {
+    "name": "interview tips",
+    "slug": "interview-tips"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 44,
+  "fields": {
+    "name": "manual testing",
+    "slug": "manual-testing"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 45,
+  "fields": {
+    "name": "qa internship",
+    "slug": "qa-internship"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 46,
+  "fields": {
+    "name": "software testing",
+    "slug": "software-testing"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 3,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 5,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 6,
+    "content_type": 10,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 9,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 10,
+    "content_type": 10,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 11,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 14,
+  "fields": {
+    "tag": 12,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 15,
+  "fields": {
+    "tag": 13,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 16,
+  "fields": {
+    "tag": 14,
+    "content_type": 10,
+    "object_id": 5
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 17,
+  "fields": {
+    "tag": 15,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 18,
+  "fields": {
+    "tag": 16,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 19,
+  "fields": {
+    "tag": 17,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 20,
+  "fields": {
+    "tag": 18,
+    "content_type": 10,
+    "object_id": 6
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 21,
+  "fields": {
+    "tag": 19,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 22,
+  "fields": {
+    "tag": 20,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 23,
+  "fields": {
+    "tag": 21,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 24,
+  "fields": {
+    "tag": 22,
+    "content_type": 10,
+    "object_id": 7
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 25,
+  "fields": {
+    "tag": 23,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 26,
+  "fields": {
+    "tag": 24,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 27,
+  "fields": {
+    "tag": 25,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 28,
+  "fields": {
+    "tag": 26,
+    "content_type": 10,
+    "object_id": 8
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 29,
+  "fields": {
+    "tag": 4,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 30,
+  "fields": {
+    "tag": 27,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 31,
+  "fields": {
+    "tag": 28,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 32,
+  "fields": {
+    "tag": 29,
+    "content_type": 10,
+    "object_id": 9
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 33,
+  "fields": {
+    "tag": 7,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 34,
+  "fields": {
+    "tag": 30,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 35,
+  "fields": {
+    "tag": 31,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 36,
+  "fields": {
+    "tag": 8,
+    "content_type": 10,
+    "object_id": 10
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 37,
+  "fields": {
+    "tag": 32,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 38,
+  "fields": {
+    "tag": 33,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 39,
+  "fields": {
+    "tag": 34,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 40,
+  "fields": {
+    "tag": 35,
+    "content_type": 10,
+    "object_id": 11
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 50,
+  "fields": {
+    "tag": 40,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 51,
+  "fields": {
+    "tag": 41,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 52,
+  "fields": {
+    "tag": 42,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 53,
+  "fields": {
+    "tag": 43,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 54,
+  "fields": {
+    "tag": 44,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 55,
+  "fields": {
+    "tag": 45,
+    "content_type": 10,
+    "object_id": 16
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 56,
+  "fields": {
+    "tag": 46,
+    "content_type": 10,
+    "object_id": 16
+  }
+}
+]
